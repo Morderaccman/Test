@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FortApp">
+      <UniqueIdentifier>{C180681B-2D60-E7B6-3678-728DA2D64D18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FortApp\FortLayerSheet">
+      <UniqueIdentifier>{6116D427-4D10-FD79-367D-938A221663E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FortImGui">
+      <UniqueIdentifier>{FB341A98-679F-CE0E-B0DD-7FB41C87AC63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FortImGui\FortD3D9">
+      <UniqueIdentifier>{99A9CFE0-858D-9036-EEED-8A89DAF07AB8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FortInterface">
+      <UniqueIdentifier>{31A89A23-9D68-165A-66A3-5FD7D2225B36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FortInterface\FortFileWorker">
+      <UniqueIdentifier>{153C1D55-01F7-0C01-AAAE-854B96485791}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FortRenderSheet">
+      <UniqueIdentifier>{B988EA8B-2514-5850-2E25-DB449A2FB450}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ConvertSheet.h" />
+    <ClInclude Include="src\FortApp\FortLayerSheet\LayerSheet.h">
+      <Filter>FortApp\FortLayerSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortApp\FortLayerSheet\LayerStackSheet.h">
+      <Filter>FortApp\FortLayerSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortApp\I4GEApp.h">
+      <Filter>FortApp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortApp\WinWnd.h">
+      <Filter>FortApp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortImGui\FortD3D9\imgui_impl_dx9.h">
+      <Filter>FortImGui\FortD3D9</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortImGui\FortD3D9\imgui_impl_win32.h">
+      <Filter>FortImGui\FortD3D9</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortImGui\imconfig.h">
+      <Filter>FortImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortImGui\imgui.h">
+      <Filter>FortImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortImGui\imgui_internal.h">
+      <Filter>FortImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortImGui\imstb_rectpack.h">
+      <Filter>FortImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortImGui\imstb_textedit.h">
+      <Filter>FortImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortImGui\imstb_truetype.h">
+      <Filter>FortImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortInterface\FortFileWorker\FileWorker.h">
+      <Filter>FortInterface\FortFileWorker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WinEntryPoint.h" />
+    <ClInclude Include="src\WinShipLinker.h" />
+    <ClInclude Include="src\i4pch.h" />
+    <ClInclude Include="src\FortInterface\IntefaceItem\Items.h" />
+    <ClInclude Include="src\FortInterface\IntefaceItem\Warehouse.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ConvertSheet.cpp" />
+    <ClCompile Include="src\FortApp\FortLayerSheet\LayerSheet.cpp">
+      <Filter>FortApp\FortLayerSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortApp\FortLayerSheet\LayerStackSheet.cpp">
+      <Filter>FortApp\FortLayerSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortApp\I4GEApp.cpp">
+      <Filter>FortApp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortApp\WinWnd.cpp">
+      <Filter>FortApp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortImGui\FortD3D9\imgui_impl_dx9.cpp">
+      <Filter>FortImGui\FortD3D9</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortImGui\FortD3D9\imgui_impl_win32.cpp">
+      <Filter>FortImGui\FortD3D9</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortImGui\imgui.cpp">
+      <Filter>FortImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortImGui\imgui_demo.cpp">
+      <Filter>FortImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortImGui\imgui_draw.cpp">
+      <Filter>FortImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortImGui\imgui_widgets.cpp">
+      <Filter>FortImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortInterface\FortFileWorker\FileWorker.cpp">
+      <Filter>FortInterface\FortFileWorker</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TestLaunch.cpp" />
+    <ClCompile Include="src\i4pch.cpp" />
+    <ClCompile Include="src\FortInterface\IntefaceItem\Items.cpp" />
+    <ClCompile Include="src\FortInterface\IntefaceItem\Warehouse.cpp" />
+  </ItemGroup>
+</Project>

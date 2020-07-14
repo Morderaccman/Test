@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Dist|x64">
+      <Configuration>Dist</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E54F8C7C-D186-8D0D-7A73-73106689090F}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TEST</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\OutputDir\Debug-windows-x86_64\TEST\</OutDir>
+    <IntDir>..\InterDir\Debug-windows-x86_64\TEST\</IntDir>
+    <TargetName>TEST</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\OutputDir\Release-windows-x86_64\TEST\</OutDir>
+    <IntDir>..\InterDir\Release-windows-x86_64\TEST\</IntDir>
+    <TargetName>TEST</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\OutputDir\Dist-windows-x86_64\TEST\</OutDir>
+    <IntDir>..\InterDir\Dist-windows-x86_64\TEST\</IntDir>
+    <TargetName>TEST</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>i4pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>I4_WND_PLATFORM;I4_DLL;I4_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64\d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>i4pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>I4_WND_PLATFORM;I4_DLL;I4_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64\d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>i4pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>I4_WND_PLATFORM;I4_DLL;I4_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64\d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\FortInterface\IntefaceItem\Items.h" />
+    <ClInclude Include="src\ConvertSheet.h" />
+    <ClInclude Include="src\FortApp\FortLayerSheet\LayerSheet.h" />
+    <ClInclude Include="src\FortApp\FortLayerSheet\LayerStackSheet.h" />
+    <ClInclude Include="src\FortApp\I4GEApp.h" />
+    <ClInclude Include="src\FortApp\WinWnd.h" />
+    <ClInclude Include="src\FortImGui\FortD3D9\imgui_impl_dx9.h" />
+    <ClInclude Include="src\FortImGui\FortD3D9\imgui_impl_win32.h" />
+    <ClInclude Include="src\FortImGui\imconfig.h" />
+    <ClInclude Include="src\FortImGui\imgui.h" />
+    <ClInclude Include="src\FortImGui\imgui_internal.h" />
+    <ClInclude Include="src\FortImGui\imstb_rectpack.h" />
+    <ClInclude Include="src\FortImGui\imstb_textedit.h" />
+    <ClInclude Include="src\FortImGui\imstb_truetype.h" />
+    <ClInclude Include="src\FortInterface\FortFileWorker\FileWorker.h" />
+    <ClInclude Include="src\FortInterface\IntefaceItem\Warehouse.h" />
+    <ClInclude Include="src\WinEntryPoint.h" />
+    <ClInclude Include="src\WinShipLinker.h" />
+    <ClInclude Include="src\i4pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\FortInterface\IntefaceItem\Items.cpp" />
+    <ClCompile Include="src\ConvertSheet.cpp" />
+    <ClCompile Include="src\FortApp\FortLayerSheet\LayerSheet.cpp" />
+    <ClCompile Include="src\FortApp\FortLayerSheet\LayerStackSheet.cpp" />
+    <ClCompile Include="src\FortApp\I4GEApp.cpp" />
+    <ClCompile Include="src\FortApp\WinWnd.cpp" />
+    <ClCompile Include="src\FortImGui\FortD3D9\imgui_impl_dx9.cpp" />
+    <ClCompile Include="src\FortImGui\FortD3D9\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\FortImGui\imgui.cpp" />
+    <ClCompile Include="src\FortImGui\imgui_demo.cpp" />
+    <ClCompile Include="src\FortImGui\imgui_draw.cpp" />
+    <ClCompile Include="src\FortImGui\imgui_widgets.cpp" />
+    <ClCompile Include="src\FortInterface\FortFileWorker\FileWorker.cpp" />
+    <ClCompile Include="src\FortInterface\IntefaceItem\Warehouse.cpp" />
+    <ClCompile Include="src\TestLaunch.cpp" />
+    <ClCompile Include="src\i4pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
